@@ -1,4 +1,4 @@
-import { Document, Schema, model,createConnection } from 'mongoose';
+import { Document, Schema, model, createConnection } from 'mongoose';
 let autoIncrement = require('mongoose-auto-increment');
 
 interface Curso extends Document {

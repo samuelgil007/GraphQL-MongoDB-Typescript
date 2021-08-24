@@ -32,7 +32,7 @@ const mutation: IResolvers = {
             return respuesta
         },
         modificarCurso(__: void, { curso }): any {
-            let respuesta = CursoModel.updateOne({ id: curso.id }, { $set: curso})
+            let respuesta = CursoModel.updateOne({ id: curso.id }, { $set: curso })
                 .then(cursoEditado => {
                     console.log("Editado curso con id " + curso.id + " " + cursoEditado)
                     return curso;

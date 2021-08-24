@@ -1,15 +1,15 @@
-import {Document, Schema, model, createConnection} from 'mongoose';
+import { Document, Schema, model, createConnection } from 'mongoose';
 let autoIncrement = require('mongoose-auto-increment');
 
-interface Student extends Document{
-    id:Number,
-    name:String,
+interface Student extends Document {
+    id: Number,
+    name: String,
     email: String,
     website: String,
-    courses:  []
-  }
+    courses: []
+}
 
-const studentSchema =  new Schema({
+const studentSchema = new Schema({
     id: {
         type: Number,
         unique: true
@@ -38,4 +38,4 @@ studentSchema.plugin(autoIncrement.plugin, {
     incrementBy: 1
 });
 
-export const StudentModel =  model<Student>('Student', studentSchema);
+export const StudentModel = model<Student>('Student', studentSchema);
